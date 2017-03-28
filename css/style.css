@@ -112,6 +112,7 @@ header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
+  text-shadow: 2px 2px #ff0000;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
@@ -264,9 +265,45 @@ section{
 }
 .bg-dark {
 	padding: 50px;
-	background-color: #222222;
+	background-color: #383838;
   	color: white;
 }
 .call-to-action h2 {
   	margin: 0 auto 20px;
+}
+
+.tab-content{
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 20px 20px 20px; 
+}
+
+.tab-content h3{
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.tab-content dl{
+  margin-left: 10px;
+}
+
+.tab-content dt{
+  /*background-color: #008080;*/
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.tab-content dt font{
+  margin-bottom: 0em;
+  font-color: white !important;
+}
+
+.tab-content dd{
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+figcaption{
+  text-align: center;
 }
