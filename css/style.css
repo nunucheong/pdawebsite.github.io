@@ -273,23 +273,30 @@ section{
 }
 
 .tab-content{
-  background-color: #f5f5f5;
-  border-radius: 10px;
+  background-color: white;
+  border-color: #f5f5f5;
+  border-style: solid;
+  border-width: 2px;
+  /*#f5f5f5;*/
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding: 10px 20px 20px 20px; 
 }
 
 .tab-content h3{
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
+  border-bottom: 1px solid #008080;
 }
 
 .tab-content dl{
   margin-left: 10px;
+  margin-bottom: 40px;
 }
 
 .tab-content dt{
   /*background-color: #008080;*/
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -300,10 +307,25 @@ section{
 }
 
 .tab-content dd{
-  font-size: 1em;
+  font-size: 1.2em;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 figcaption{
   text-align: center;
+}
+
+.treatment-header {
+  background-color: #008080;
+  margin-bottom: 10px;
+}
+
+.treatment-header h1{
+  color: white;
+  font-size: 5em;
+}
+
+.treatment-bg{
+  background-color: #E8E8EE;
 }
