@@ -50,9 +50,9 @@ h6 {
 }
 
 p {
-	font-size: 16px;
+	font-size: 3vmin;
 	line-height: 1.5;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 .bg-primary {
@@ -112,7 +112,7 @@ header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #0047ab;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
@@ -141,7 +141,7 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
   header .header-content .header-content-inner h1 {
-    font-size: 50px;
+    font-size: 5vh;
   }
   header .header-content .header-content-inner p {
     font-size: 18px;
@@ -172,7 +172,7 @@ header .header-content .header-content-inner p {
 }
 
 .section-heading {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .bg-footer{
@@ -256,12 +256,76 @@ section{
   outline: none;
 }
 @media (min-width: 768px) {
+  p{
+    font-size: 2.5vmin;
+  }
+
+  h3{
+    /*margin-top: 5px;*/
+    margin bottom: 5px;
+    font-size: 3vmin;
+  }
+   
+  .tab-content h3 {
+    margin-top: 5px;
+  } 
+  
+  h2{
+    font-size: 4vmin;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+
+  hr{
+    margin-top: 3px;
+    margin bottom: 3px;
+  }
+
 	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
 	font-size: 16px;
 	}
 	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
 	font-size: 22px;
 	}
+
+  .tab-content h3{
+    font-size: 3vmin;
+    /*margin-bottom: 20px;*/
+    border-bottom: 1px solid #008080;
+  }
+
+  .tab-content dl{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tab-content dt{
+    /*background-color: #008080;*/
+    font-size: 2.5vh;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .tab-content dt font{
+    margin-bottom: 0em;
+    font-color: white !important;
+  }
+
+  .tab-content dd{
+    font-size: 2vh;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .table-responsive{
+    overflow-x: visible;
+  }
+
+  .table{
+    margin-bottom: 0px;
+  }
+
 }
 .bg-dark {
 	padding: 50px;
@@ -280,23 +344,26 @@ section{
   /*#f5f5f5;*/
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 10px 20px 20px 20px; 
+  padding: 10px 10px 10px 10px; 
+  height: 100%;
+  overflow: auto;
 }
 
 .tab-content h3{
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 3vmin;
+  /*margin-bottom: 20px;*/
   border-bottom: 1px solid #008080;
 }
 
 .tab-content dl{
+  margin-top: 5px;
   margin-left: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .tab-content dt{
   /*background-color: #008080;*/
-  font-size: 1.5em;
+  font-size: 2.5vmin;
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -307,7 +374,7 @@ section{
 }
 
 .tab-content dd{
-  font-size: 1.2em;
+  font-size: 2vmin;
   margin-left: 10px;
   margin-bottom: 10px;
 }
@@ -317,15 +384,60 @@ figcaption{
 }
 
 .treatment-header {
-  background-color: #008080;
+  /*background-color: #008080;*/
   margin-bottom: 10px;
 }
 
 .treatment-header h1{
   color: white;
-  font-size: 5em;
+  font-size: 3vmin;
 }
 
 .treatment-bg{
-  background-color: #E8E8EE;
+  /*background-color: #E8E8EE;*/
+}
+
+.info-card{
+  background-color: #eeeeee;
+  padding: 15px;
+  box-shadow: 10px 10px rgba(0, 0, 0, .5);
+}
+
+.info-card hr{
+  max-width: 100%;
+}
+
+.info-card h3{
+  color: #008080;
+}
+
+.info-card p{
+  color: #008080;
+}
+
+
+.info-card li{
+  color: #008080;
+  font-size: 2vmin;
+}
+
+.info-card li::before {
+  color: #008080; /* or whatever color you prefer */
+}
+
+.info-card table{
+  color: #008080;
+  border-color: #008080;
+}
+.info-card thead tr th{
+  color: #008080;
+  border-color: #008080;
+  font-weight: bolder;
+}
+.info-card tbody tr td{
+  color: #008080;
+  border-color: #008080;
+}
+table{
+  margin-bottom: 0px;
 }
