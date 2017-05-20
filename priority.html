@@ -155,7 +155,7 @@ var untick = "&#9744";
 </form>
 
 
-<form id="patientConcerns" name="patientConcerns" onsubmit="return retrieveConcerns();">
+<form id="patientConcerns" name="patientConcerns">
 <label><input type="checkbox" name="concerns[]" onchange='addKnowledge(this);' value="I dont have enough information to make a choice.I want to know more about ... ">I dont have enough information to make a choice.I want to know more about ... </label><br/>
 <div id="expandKnowledge"></div>
 <label><input type="checkbox" name="concerns[]" value="I am concerned about the treatment cost.">I am concerned about the treatment cost.</label><br/>
@@ -169,7 +169,7 @@ var untick = "&#9744";
 <div id="expandSupport"></div>
 <label><input type="checkbox" name="concerns[]" value="I am distressed (e.g. shocked, confused, angry, panicked)">I am distressed (e.g. shocked, confused, angry, panicked)</label><br/>
 </form>
-<h1 onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</h1>
+<button onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</button>
 </div>
 </body>
 </html>
