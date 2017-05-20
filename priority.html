@@ -5,21 +5,31 @@
 
 </head>
 <body>
+
 <script>
 
 function getCheckedBoxes(chkboxName) {
   var checkboxes = document.getElementsByName(chkboxName);
-  var checkboxesChecked = [];
+  // var checkboxesChecked = [];
+  var displayChecked = "";
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        checkboxesChecked.push(checkboxes[i].value);
-        alert(checkboxes[i].value);
+        // checkboxesChecked.push(checkboxes[i].value);
+        displayChecked += "<label><input type='checkbox' checked disabled>"+checkboxes[i].value+"</label><br/>";
      }
   }
+
+  //print the checkboxes
+  
+  // for(int i=0;i<checkboxesChecked.length;i++){
+  // 	displayChecked += "<label><input type='checkbox' checked disabled>"+checkboxesChecked[i].value+"</label><br/>";
+  // }
+
   // Return the array if it is non-empty, or null
-  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+  // return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+  return displayChecked;
 }
 
 
@@ -27,7 +37,8 @@ function getCheckedBoxes(chkboxName) {
 	var treatmentGoalsIssues = ["Chance of survival","Curing the cancer","Curing any symptoms I may have","Having the best possible sexual performance","Having a good bowel and bladder control","Cost of treatment"];
 
 	function retrieveGoals(patientTreatmentGoals){
-
+var tick = "&#9745";
+var untick = "&#9744";
 		var createTable = "<div id='goalsOutput'><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
 		for(i=0;i<6;i++){
 			var data = document.forms["patientTreatmentGoals"]["treatmentGoals["+i+"]"].value;
@@ -41,12 +52,9 @@ function getCheckedBoxes(chkboxName) {
 				data = "Unanswered";
 			createTable += "<tr><td>"+treatmentGoalsIssues[i]+"</td><td>"+data+"</td></tr>";
 		}
-		createTable += "</tbody></table></div><button onclick='javascript:demoFromHTML();'>PDF</button>";
+		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:demoFromHTML();'>PDF</button>";
 		// createTable += "<p>&#9744; huhuhuu</p><p>&#9745; testtttt</p>";
 		document.getElementById("outputLocation").innerHTML = createTable;
-
-		var tick = "&#9745";
-		var untick = "&#9744";
 		}
 </script>
 <div id="outputLocation"><center>
@@ -144,11 +152,11 @@ function getCheckedBoxes(chkboxName) {
 		}
 	}
 
-	function checkCheckbox(patientConcerns){
-		// var form = document.form['patientConcerns'];
-		var checkedBoxes = getCheckedBoxes("concerns[]");
-		alert(checkedBoxes+"huhu");
-	}
+	// function checkCheckbox(patientConcerns){
+	// 	// var form = document.form['patientConcerns'];
+	// 	var checkedBoxes = getCheckedBoxes("concerns[]");
+	// 	alert(checkedBoxes+"huhu");
+	// }
 
 	function demoFromHTML() {
 
