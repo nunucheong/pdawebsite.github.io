@@ -8,35 +8,29 @@
 
 <script>
 
-function getCheckedBoxes(chkboxName) {
+function getCheckedBoxes(chkboxName) {	//function to collect all ticked checkboxes
   var checkboxes = document.getElementsByName(chkboxName);
-  // var checkboxesChecked = [];
   var displayChecked = "<br/><h1><b><center>Concerns</center></b></h1>";
-  // loop over them all
+  var x="";
+  if(checkboxes[0].checked){
+  x = document.getElementById("knowledge").value;
+  }
   for (var i=0; i<checkboxes.length; i++) {
-     // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        // checkboxesChecked.push(checkboxes[i].value);
-        displayChecked += "<br/><label><input type='checkbox' checked disabled>"+checkboxes[i].value+"</label>";
+
+        displayChecked += "<br/><label><input type='checkbox' checked disabled>->"+checkboxes[i].value+"</label>";
+
+        if(checkboxes[0].checked){
+     		displayChecked += " "+x;
+     		x = "";
+        }
      }
   }
-
-  //print the checkboxes
-  
-  // for(int i=0;i<checkboxesChecked.length;i++){
-  // 	displayChecked += "<label><input type='checkbox' checked disabled>"+checkboxesChecked[i].value+"</label><br/>";
-  // }
-
-  // Return the array if it is non-empty, or null
-  // return checkboxesChecked.length > 0 ? checkboxesChecked : null;
   return displayChecked;
 }
+	var treatmentGoalsIssues = ["Chance of survival","Curing the cancer","Curing any symptoms I may have","Having the best possible sexual performance","Having a good bowel and bladder control","Cost of treatment"];	//used to concatenate data
 
-
-
-	var treatmentGoalsIssues = ["Chance of survival","Curing the cancer","Curing any symptoms I may have","Having the best possible sexual performance","Having a good bowel and bladder control","Cost of treatment"];
-
-	function retrieveGoals(patientTreatmentGoals){
+	function retrieveGoals(patientTreatmentGoals){	//generate table based on user selection
 var tick = "&#9745";
 var untick = "&#9744";
 		var createTable = "<div id='goalsOutput'><br/><h1><b><center>Treatment Goals</center></b></h1><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
@@ -52,10 +46,60 @@ var untick = "&#9744";
 				data = "Unanswered";
 			createTable += "<tr><td>"+treatmentGoalsIssues[i]+"</td><td>"+data+"</td></tr>";
 		}
-		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:demoFromHTML();'>Create PDF</button>";
+		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:generatePDF();'>Create PDF</button>";
 		// createTable += "<p>&#9744; huhuhuu</p><p>&#9745; testtttt</p>";
 		document.getElementById("outputLocation").innerHTML = createTable;
 		}
+
+		function addSupport(checkbox){	//function utk add checkbox
+
+		var expand = "&ensp;<label><input type='checkbox' name='concerns[]' value='->   Family support'>Family support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='->   Financial support'>Financial support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='->   Spiritual support'>Spiritual support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='->   Support from doctors'>Support from doctors</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='->   Peers/ support group'>Peers/ support group</label><br/>";
+
+		if(checkbox.checked){
+			document.getElementById("expandSupport").innerHTML = expand;
+		}
+		else{
+			document.getElementById("expandSupport").innerHTML = "";
+		}
+	}
+
+	function addKnowledge(checkbox){	//function utk add input text
+		var expand = "<input type='text' name='knowledge' id='knowledge'/>";
+		if(checkbox.checked){
+			document.getElementById("expandKnowledge").innerHTML = expand;
+		}else{
+			document.getElementById("expandKnowledge").innerHTML = "";
+		}
+	}
+
+	function generatePDF() {	//function utk generate PDF,process the div tag
+
+    var pdf = new jsPDF('p', 'pt', 'letter');
+    source = $('#goalsOutput')[0];
+    specialElementHandlers = {
+        '#bypassme': function (element, renderer) {
+            return true
+        }
+    };
+    margins = {
+        top: 150,
+        bottom: 60,
+        left: 40,
+        width: 522
+    };
+    pdf.fromHTML(
+    source, // HTML string or DOM elem ref.
+    margins.left, // x coord
+    margins.top, { // y coord
+        'width': margins.width, // max width of content on PDF
+        'elementHandlers': specialElementHandlers
+        },
+
+    function (dispose) {
+        pdf.save('Priority.pdf');
+        }, margins);
+    }
+
 </script>
 <div id="outputLocation">
 <form id="patientTreatmentGoals" name ="patientTreatmentGoals">
@@ -127,81 +171,5 @@ var untick = "&#9744";
 </form>
 <h1 onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</h1>
 </div>
-
-<script>
-
-	function addSupport(checkbox){
-
-		var expand = "&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Family support'>Family support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Financial support'>Financial support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Spiritual support'>Spiritual support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Support from doctors'>Support from doctors</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Peers/ support group'>Peers/ support group</label><br/>";
-
-		if(checkbox.checked){
-			document.getElementById("expandSupport").innerHTML = expand;
-		}
-		else{
-			document.getElementById("expandSupport").innerHTML = "";
-		}
-	}
-
-	function addKnowledge(checkbox){
-		var expand = "<input type='text' name='knowledge'/>";
-
-		if(checkbox.checked){
-			document.getElementById("expandKnowledge").innerHTML = expand;
-		}else{
-			document.getElementById("expandKnowledge").innerHTML = "";
-		}
-	}
-
-	// function checkCheckbox(patientConcerns){
-	// 	// var form = document.form['patientConcerns'];
-	// 	var checkedBoxes = getCheckedBoxes("concerns[]");
-	// 	alert(checkedBoxes+"huhu");
-	// }
-
-	function demoFromHTML() {
-
-    var pdf = new jsPDF('p', 'pt', 'letter');
-
-
-    // source can be HTML-formatted string, or a reference
-    // to an actual DOM element from which the text will be scraped.
-    source = $('#goalsOutput')[0];
-
-    // we support special element handlers. Register them with jQuery-style 
-    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-    // There is no support for any other type of selectors 
-    // (class, of compound) at this time.
-    specialElementHandlers = {
-        // element with id of "bypass" - jQuery style selector
-        '#bypassme': function (element, renderer) {
-            // true = "handled elsewhere, bypass text extraction"
-            return true
-        }
-    };
-    margins = {
-        top: 150,
-        bottom: 60,
-        left: 40,
-        width: 522
-    };
-    // all coords and widths are in jsPDF instance's declared units
-    // 'inches' in this case
-    pdf.fromHTML(
-    source, // HTML string or DOM elem ref.
-    margins.left, // x coord
-    margins.top, { // y coord
-        'width': margins.width, // max width of content on PDF
-        'elementHandlers': specialElementHandlers
-        },
-
-    function (dispose) {
-        // dispose: object with X, Y of the last line add to the PDF 
-        //          this allow the insertion of new lines after html
-        // pdf.text(35, 25, "testing"+&#9745);
-        pdf.save('Test.pdf');
-        }, margins);
-    }
-
-</script>
 </body>
 </html>
