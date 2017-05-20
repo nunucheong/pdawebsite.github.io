@@ -87,6 +87,16 @@ html.fp-enabled,
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
 }
+.scroll-down-btn {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}
+.scroll-up-btn {
+    left: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent #fff transparent transparent;
+}
 .fp-scrollable {
     overflow: hidden;
     position: relative;

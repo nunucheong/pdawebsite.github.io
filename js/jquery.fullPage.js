@@ -602,8 +602,8 @@
             $(SECTION_SEL).on('click touchstart', SLIDES_ARROW_SEL, slideArrowHandler);
 
             //Scrolling vertically 
-            $(SECTION_SEL).on('click touchstart', ".scroll-down-btn", slideMovementHandler);
-
+            $(SECTION_SEL).on('click touchstart', ".scroll-down-btn", slideMovementDownHandler);
+            $(SECTION_SEL).on('click touchstart', ".scroll-up-btn", slideMovementUpHandler);
             /**
             * Applying normalScroll elements.
             * Ignoring the scrolls over the specified selectors.
@@ -1844,11 +1844,21 @@
             }
         }
 
-        function slideMovementHandler(){
+        function slideMovementDownHandler(){
             var section = $(this).closest(SECTION_SEL);
 
             if ($(this).hasClass("scroll-down-btn")) {
                 moveSectionDown();               
+            } else {
+                
+            }
+        }
+
+        function slideMovementUpHandler(){
+            var section = $(this).closest(SECTION_SEL);
+
+            if ($(this).hasClass("scroll-up-btn")) {
+                moveSectionUp();               
             } else {
                 
             }

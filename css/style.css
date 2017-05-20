@@ -130,15 +130,14 @@ header .header-content .header-content-inner p {
   }
   header .header-content {
     position: absolute;
-    top: 60%;
+    top: 55%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     padding: 0 50px;
   }
   header .header-content .header-content-inner {
-    max-width: 1000px;
-    top: 50%; 
+    margin: auto; 
     margin-left: auto;
     margin-right: auto;
   }
@@ -349,6 +348,7 @@ section{
   padding: 10px 10px 10px 10px; 
   height: 100%;
   overflow: auto;
+  color: #000;
 }
 
 .tab-content h3{
@@ -379,6 +379,7 @@ section{
   font-size: 2vmin;
   margin-left: 10px;
   margin-bottom: 10px;
+  color: #000;
 }
 
 figcaption{
@@ -447,5 +448,23 @@ table{
 .nav-btn{
   margin-top: 20px;
   position: absolute;
-  bottom: 15%;
+  bottom: 7%;
+  width: 80%;
+  left: 10%;
+}
+table{
+  color: #008080;
+  border-color: #008080;
+}
+thead tr th{
+  color: #008080;
+  border-color: #008080;
+  font-weight: bolder;
+}
+tbody tr td{
+  color: #008080;
+  border-color: #008080;
+}
+nav-tab{
+  color: #fff;
 }
