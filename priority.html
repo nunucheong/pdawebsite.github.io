@@ -11,13 +11,13 @@
 function getCheckedBoxes(chkboxName) {
   var checkboxes = document.getElementsByName(chkboxName);
   // var checkboxesChecked = [];
-  var displayChecked = "";
+  var displayChecked = "<br/><h1><b><center>Concerns</center></b></h1>";
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
         // checkboxesChecked.push(checkboxes[i].value);
-        displayChecked += "<label><input type='checkbox' checked disabled>"+checkboxes[i].value+"</label><br/>";
+        displayChecked += "<br/><label><input type='checkbox' checked disabled>"+checkboxes[i].value+"</label>";
      }
   }
 
@@ -39,7 +39,7 @@ function getCheckedBoxes(chkboxName) {
 	function retrieveGoals(patientTreatmentGoals){
 var tick = "&#9745";
 var untick = "&#9744";
-		var createTable = "<div id='goalsOutput'><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
+		var createTable = "<div id='goalsOutput'><br/><h1><b><center>Treatment Goals</center></b></h1><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
 		for(i=0;i<6;i++){
 			var data = document.forms["patientTreatmentGoals"]["treatmentGoals["+i+"]"].value;
 			if(data == "1")
@@ -52,12 +52,12 @@ var untick = "&#9744";
 				data = "Unanswered";
 			createTable += "<tr><td>"+treatmentGoalsIssues[i]+"</td><td>"+data+"</td></tr>";
 		}
-		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:demoFromHTML();'>PDF</button>";
+		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:demoFromHTML();'>Create PDF</button>";
 		// createTable += "<p>&#9744; huhuhuu</p><p>&#9745; testtttt</p>";
 		document.getElementById("outputLocation").innerHTML = createTable;
 		}
 </script>
-<div id="outputLocation"><center>
+<div id="outputLocation">
 <form id="patientTreatmentGoals" name ="patientTreatmentGoals">
 	<table>
 	<thead>
@@ -107,9 +107,9 @@ var untick = "&#9744";
 		</tr>
 	</tbody>
 	</table>
-	<h1 onclick="javascript:retrieveGoals(patientTreatmentGoals);">Retrieve Goalllsss</h1>
-</form></center>
-</div>
+	
+</form>
+
 
 <form id="patientConcerns" name="patientConcerns" onsubmit="return retrieveConcerns();">
 <label><input type="checkbox" name="concerns[]" onchange='addKnowledge(this);' value="I dont have enough information to make a choice.I want to know more about ... ">I dont have enough information to make a choice.I want to know more about ... </label><br/>
@@ -124,15 +124,15 @@ var untick = "&#9744";
 <label><input type="checkbox" name="concerns[]" onchange='addSupport(this);' value="I need more support in making a decision. I want more:">I need more support in making a decision. I want more :</label><br/>
 <div id="expandSupport"></div>
 <label><input type="checkbox" name="concerns[]" value="I am distressed (e.g. shocked, confused, angry, panicked)">I am distressed (e.g. shocked, confused, angry, panicked)</label><br/>
-	<h1 onclick="return retrieveConcerns();">Retrieve Concerns</h1>
-	<h1 onclick="return checkCheckbox();">Check Checkbox</h1>
 </form>
+<h1 onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</h1>
+</div>
 
 <script>
 
 	function addSupport(checkbox){
 
-		var expand = "&ensp;<label><input type='checkbox' name='concerns[]' value='Family support'>Family support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='Financial support'>Financial support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='Spiritual support'>Spiritual support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='Support from doctors'>Support from doctors</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='Peers/ support group'>Peers/ support group</label><br/>";
+		var expand = "&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Family support'>Family support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Financial support'>Financial support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Spiritual support'>Spiritual support</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Support from doctors'>Support from doctors</label><br/>&ensp;<label><input type='checkbox' name='concerns[]' value='-->   Peers/ support group'>Peers/ support group</label><br/>";
 
 		if(checkbox.checked){
 			document.getElementById("expandSupport").innerHTML = expand;
