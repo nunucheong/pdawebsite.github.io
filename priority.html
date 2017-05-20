@@ -8,15 +8,14 @@
 <script>
 
 function getCheckedBoxes(chkboxName) {
-	var checkboxes = document.forms["patientConcerns"]["concerns"];
-  // var checkboxes = document.getElementsByName(chkboxName);
+  var checkboxes = document.getElementsByName(chkboxName);
   var checkboxesChecked = [];
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        checkboxesChecked.push(checkboxes[i]);
-        alert(checkboxes[i]);
+        checkboxesChecked.push(checkboxes[i].value);
+        alert(checkboxes[i].value);
      }
   }
   // Return the array if it is non-empty, or null
@@ -146,8 +145,8 @@ function getCheckedBoxes(chkboxName) {
 	}
 
 	function checkCheckbox(patientConcerns){
-		
-		var checkedBoxes = getCheckedBoxes(form.concerns);
+		// var form = document.form['patientConcerns'];
+		var checkedBoxes = getCheckedBoxes("concerns[]");
 		alert(checkedBoxes+"huhu");
 	}
 
