@@ -104,6 +104,7 @@ header .header-content {
   position: relative;
   text-align: center;
   padding: 100px 15px 100px;
+  height: 100%;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
@@ -129,7 +130,7 @@ header .header-content .header-content-inner p {
   }
   header .header-content {
     position: absolute;
-    top: 50%;
+    top: 60%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -137,6 +138,7 @@ header .header-content .header-content-inner p {
   }
   header .header-content .header-content-inner {
     max-width: 1000px;
+    top: 50%; 
     margin-left: auto;
     margin-right: auto;
   }
@@ -444,4 +446,6 @@ table{
 
 .nav-btn{
   margin-top: 20px;
+  position: absolute;
+  bottom: 15%;
 }
