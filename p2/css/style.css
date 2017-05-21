@@ -326,6 +326,7 @@ section{
 
   .table{
     margin-bottom: 0px;
+    font-size: 20px;
   }
 
 }
@@ -468,7 +469,7 @@ tbody tr td{
   border-color: #008080;
 }
 nav-tab{
-  color: #fff;
+  font-size: 20px;
 }
 dl{
   margin-top: 5px;
