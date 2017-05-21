@@ -1,1234 +1,215 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>PDA</title>
-  <meta name="author" content="UM" />
-  <meta name="description" content="fullPage continuous scrolling demo." />
-  <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
-  <meta name="Resource-type" content="Document" />
-
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<title>Prostate Cancer PDA</title>
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 
-  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-  <link rel="stylesheet" type="text/css" href="css/examples.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-        <![endif]-->
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script src="https://use.fontawesome.com/d24aa2ca90.js"></script>
-        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-        <script type="text/javascript" src="js/examples.js"></script>
-      <!--   <script type="text/javascript" src="js/scrolloverflow.js"></script> -->
-        <script type="text/javascript">
-          $(document).ready(function() {
-            $('#fullpage').fullpage({
-              sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#551A8B', '#ccddff',  '#89cff0'],
-              anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage','lastPage'],
-              menu: '#menu',
-            });
-          });
-        </script>
-
-      </head>
-      <body>
-
-        <ul id="menu">
-          <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Understanding Your Prostate</a></li>
-          <li data-menuanchor="secondPage"><a href="#secondPage">Overview</a></li>
-          <li data-menuanchor="3rdPage"><a href="#3rdPage">Treatment Choices</a></li>
-          <li data-menuanchor="4thpage"><a href="#4thpage">Side Effects</a></li>
-        </ul>
-
-        <div id="fullpage">
-          <div class="section active" id="section0">
-            <div class="slide active" id="slide01">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>PART 1: <br>
-                    Understanding Your Prostate And It's Functions</h1>                    
-                    <!-- <div class="fp-controlArrow fp-prev">Hello World</div> -->
-                                          
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">                        
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide>></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>                
-              </header>
-            </div>
-            <div class="slide" id="slide02">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>What is Prostate?</h1>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <p>The prostate is part of the male reproductive system. It is below the bladder and in front of the rectum in the pelvic region. The prostate is about the size of a chestnut when it is healthy. It surrounds the tube called the urethra that carries urine and semen out of the penis.</p>
-                      </div>
-                      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <p>
-                          Prostate is a gland that helps make semen which is released during ejaculation. The prostate produces another substance called PSA (prostate specific antigen). PSA level can be higher than normal in men with prostate cancer as well as in some other benign prostate conditions such as BPH/benign hyperplasia (prostate enlargement) or prostatitis (infection of the prostate).
-                        </p>
-                      </div>
-                    </div>
-                    <div class="container nav-btn">
-                      <div class="row">
-                        <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                          <button class="btn btn-default"><< Previous Slide </button>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script src="https://use.fontawesome.com/d24aa2ca90.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header page-scroll">
+				<a class="navbar-brand page-scroll" href="#page-top">Prostate Cancer PDA</a>
+			</div>
+		<div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="page-scroll" href="#overview">Overview</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="#portfolio">Treatment Options</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="#download">Download</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="#contact">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<div class="header-content">
+			<div class="header-content-inner">
+				<h1 id="home-heading"> Making The Choice </h1>
+				<hr>
+				<p>Deciding What to Do about Early Stage Prostate Cancer</p>
+				<a href="#overview" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+			</div>
+		</div>
+	</header
+>	<section class="bg-primary" id="overview">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<h2 class="section-heading">Overview</h2>
+					<hr class="light">
+					<p class="text-faded">Prostate cancer is a very differend kind of cancer. Most prostate cancers grow very slowly and do not cause problems especially for those with early stage prostate cancer. Thus you can take your time to decide on your treatment choices. There is no hurry to start the treatment immediately.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="purpose">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">How This Website Helps</h2>
+					<hr>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-question text-primary "></i>
+						<h3>Understand Your Disease</h3>
+						<p class="text-muted">Helps you understand medical facts about early stage prostate cancer</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-medkit text-primary "></i>
+						<h3>Know Your Choices</h3>
+						<p class="text-muted">Provides facts about the disease, treatment choices, benefits and risks of each treatment</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-puzzle-piece text-primary "></i>
+						<h3>Effective Decision Making</h3>
+						<p class="text-muted">Guide to have better treatment decision after discussing with your doctor</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<div class="service-box">
+						<i class="fa fa-4x fa-heartbeat text-primary "></i>
+						<h3>Be Well Informed</h3>
+						<p class="text-muted">Even if you chooce to let the doctor decide, you will be well informed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="no-padding" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">Treatment Options</h2>
+					<hr>
+				</div>
+			</div>
+		</div>
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="observation.html" class="portfolio-box">
+                        <img src="img/observation.jpg" class="img-responsive" alt="">
+                        <figcaption>Observation</figcaption>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Treatment Option
+                                </div>
+                                <div class="project-name">
+                                    Observation
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        </div>
-                        <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                          <button class="btn btn-default">Next Slide >></button>
-                        </div>
-                      </div>
-                    </div>              
-                  </div>                   
+                    </a>
                 </div>
-              </header>              
-            </div>
-            <div class="slide" id="slide03">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>What Can Happen To The Prostate</h1>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-left" style="margin-top: 20px">
-                          <div class="info-card">
-                            <h3><b>Benign Prostatic Hyperplasia or BPH</b></h3>
-                            <hr class="light" align="left" style="max-width: 100%">
-                            <p>As your get older, the prostate can grow. If the prostate becomes too large, it can press on the urethra (tube that carries urine and semen out of the penis). This may cause difficulty in urination.</p>
-                          </div>
-                      </div>                      
-                      <div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-left" style="margin-top: 20px">
-                          <div class="info-card">
-                              <h3><b>Prostate Cancer</b></h3>
-                              <hr class="light" align="left" style="max-width: 100%">
-                              <p>
-                                The prostate can also develop cancer. The cancer is localized when it is in the early stage (Stage 1 and 2). It can spread to the nearby tissue such as the seminal vesicles, or later get into the bloodstream and lymphatic system and spread to other parts of the body such as bones and lymph nodes (stage 3 and 4).
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-left" style="margin-top: 20px">
-                          <div class="info-card">
-                            <h3><b>Prostatitis</b></h3>
-                            <hr class="light" align="left" style="max-width: 100%">
-                            <p>
-                              The prostate becomes inflamed. It happens when there is an infection in the are of prostate.
-                            </p>
-                          </div>
-                      </div>
-                    </div>              
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                          <button class="btn btn-default"><< Previous Slide</button>
-                      </div>                        
-                      <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                      </div>
-                      <div class="scroll-down-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                        <button class="btn btn-default">Next Section >></button>
-                      </div>
-                    </div>
-                  </div>              
+                <div class="col-lg-4 col-sm-6">
+                    <a href="surgery.html" class="portfolio-box">
+                        <img src="img/tools.png" class="img-responsive" alt="">
+                        <figcaption>Surgery</figcaption>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Treatment Option
+                                </div>
+                                <div class="project-name">
+                                    Surgery
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </header>
-            </div>
-          </div>
-          <div class="section" id="section1">
-            <div class="slide active" id="slide11">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>PART 2: <br>
-                    Overview of Prostate Cancer</h1>
-                    
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="scroll-up-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Section</button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="radiotherapy.html" class="portfolio-box">
+                        <img src="img/radiotherapy.jpg" class="img-responsive" alt="">
+                        <figcaption>Radiotherapy</figcaption>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Treatment Option
+                                </div>
+                                <div class="project-name">
+                                    Radiotherapy
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </header>
             </div>
-            <div class="slide" id="slide12">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>How Is Prostate Cancer Different From Other Cancer?</h1>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <p>Prostate cancer is a very different kind of cancer. Most prostate cancers grow very slowly and do not cause problems especially for those with early stage prostate cancer. Thus, you can take your time to decide on your treatment choices. There is no hurry to start the treatment immediately.</p>
-                      </div>
-                      <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <p>
-                          Most men with prostate cancer do not die from prostate cancer. Because it is slow growing, men often die from other conditions such as heart attack. However, a few prostate cancers grow more quickly and there is a chance it could grow and spread and even cause death.
-                        </p>
-                      </div>
-                    </div>              
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>              
-            </div>
-            <div class="slide" id="slide13">
-              <header>
-                  <div class="header-content">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">                      
-                        <div class="header-content-inner">
-                            <h1>Medical Tests</h1>
-                        </div>
-                      </div>
-                      <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <p>Your doctor will take into account of your general health, the result of your tests and examinations, and the Gleason score (a method to grade prostate cancer) of your cancer when talking with you about your treatment choices.</p>
-                        <p>
-                          The common tests are:
-                        </p>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <h3>Grading Of The Cancer (Gleason Score)</h3>
-                          <hr>
-                          <p>
-                            This is categorized based on variouexamples taken from prostate biopsy and examined under a microscope. This score tells how different the prostate cancer tissue looks from normal prostate tissue and how likely it is that the cancer will grow or spread.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <h3>PSA Test</h3>
-                          <hr>
-                          <p>The PSA is a blood test. The lower the PSA, the better the chances are that treatment will be successful.</p>
-                        </div>
-                      </div>
-                      
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <h3>Staging Of The Tumour</h3>
-                          <hr>
-                          <p>The tests include digital rectal examination, bone scan, MRI or CT scane. The lower the stage, the better the chance of a successful treatment.</p>
-                        </div>
-                      </div>                      
-                    </div>              
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>              
-            </div>
-            <div class="slide" id="slide14">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>Who Are The Doctors Who Manage Prostate Cancer?</h1>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left" style="margin-top: 20px">
-                        <p>The doctors involve in managing your cancer are mainly the urologists and oncologists.</p>
-                        <p>
-                          Urologists are doctors who treat diseases of the urinary system and male sex organs. They are the surgeons who take the biopsy from you and they are usually the first doctors who tell you about your disease. They carry out surgery to remove the cancer.
-                        </p>
-                        <p>
-                          Oncologists are doctorrs who specialize in treating cancer using chemotherapy, hormone therapy and radiation. They are doctors who are going to manage your radiation therapy if you choose this treatment. You need to see the oncologist for further understanding of the radiation procedures and its side effect. They will arrange follow up with you if you choose radiation as your treatment.
-                        </p>
-                      </div>
-                    </div>              
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>              
-            </div>
-            <div class="slide" id="slide15">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>What Are The Treatment Choices For Early Stage Prostate Cancer?</h1>
-                  </div>
-                  <div class="container-fluid">              
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <h3>Observation</h3>
-                          <hr>
-                          <p>Your doctor will monitor the progress of your prostate cancer regularly through follow-ups. There is no surgery or radiation treatment given. Side effects of those treatments are avoided.</p>
-                          <!-- <p>There are two types of observation:</p>
-                          <ul>
-                            <li><b>Watchful Waiting: </b>This is appropriate if you and your doctor decide to only treat the cancer when it causes symptoms.</li>
-                            <li><b>Active Surveillance: </b>You and your doctor will monitor the prostate cancer closely by using laboratory tests. When there is a sign of cancer growing, you can choose another type of treatment.</li>
-                          </ul> -->
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <h3>Active Treatments</h3>
-                          <hr>
-                          <p>
-                            Surgery and radiotherapy are two other treatment choices. They may cure you, but they may also cause side effects, such as problems with controlling your bladder and bowel as well as affecting your sexual function (problem with erection).
-                          </p>
-                        </div>
-                      </div>
-                    </div>              
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>              
-            </div>
-            <div class="slide" id="slide17">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>How Does Your Doctor Classify Your Risk Group</h1>
-                  </div>
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left" style="margin-top: 20px">
-                        <h3><b>Prostate Cancer Risk Group</b></h3>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">    
-                        <div class="info-card">                    
-                          <p>Early prostate cancer can be classified based on PSA level, stage and grade (Gleason Score). The risk refers to the chance of the cancer growing or spreading over time.</p>
-                          <ul>
-                            <li>Low-risk: not likely to grow or spread for many years.</li>
-                            <li>Intermediate-risk: not likely to grow of spread for a few years</li>
-                            <li>High-risk: may grow or spread within a few years.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left" style="margin-top: 20px">
-                        <div class="info-card">
-                          <p>If you are in low or intermediate-risk group, you can have the options of choosing observation (watchful waiting or active surveillance), surgery or radiotherapy. If you are in the high risk groups, the doctor would recommend that you choose either surgery or radiation because there is a higher risk for progression of the prostate cancer.</p>
-                        </div>
-                      </div>
-                    </div>  
-                                
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide</button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>              
-            </div>
-          <div class="slide" id="slide18">
-              <header>
-                  <div class="header-content">
-                    <div class="header-content-inner">
-                    <h1>How Does Your Doctor Classify Your Risk Group</h1>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left" style="margin-top: 20px">
-                        <h3><b>Classification of risk groups</b></h3>
-                        <div class="table-responsive info-card">                    
-                          <table class="table table-bordered">
-                            <thead>
-                              <th></th>
-                              <th>PSA Level</th>
-                              <th>Gleason Score</th>
-                              <th>Tumour Stage</th>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>Low-risk</td>
-                                <td>Less than 10 ng/ml</td>
-                                <td>6 or Lower</td>
-                                <td>T1(a to c) or T2a</td>  
-                              </tr>
-                              <tr>
-                                <td>Intermediate-risk</td>
-                                <td>10-20 ng/ml</td>
-                                <td>7</td>
-                                <td>T2b</td>
-                              </tr>
-                              <tr>
-                                <td>High-risk</td>
-                                <td>More than 20 ng/ml</td>
-                                <td>8 or higher</td>
-                                <td>T2c</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container nav-btn">
-                      <div class="row">
-                        <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                            <button class="btn btn-default"><< Previous Slide</button>
-                        </div>                        
-                        <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        </div>
-                        <div class="scroll-down-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                          <button class="btn btn-default">Next Section >></button>
-                        </div>
-                      </div>
-                  </div> 
-                </div>
-              </header>              
-            </div>
-          </div>
-          <div class="section" id="section2">
-            <div class="slide active" id="slide21">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>PART 3: <br>
-                    Treatment Choices</h1>
-                    <div class="container nav-btn">
-                      <div class="row">
-                        <div class="scroll-up-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                          <button class="btn btn-default"><< Previous Section</button>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        </div>
-                        <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                          <button class="btn btn-default">Next Slide >></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>
-            </div>
-            <div class="slide" id="slide22">
-              <header>
-                <div class="header-content">
-                  <div class="treatment-header">
-                    <div class="container-fluid ">
-                      <div class="row">
-                        <div class="col-lg-12 text-left">
-                          <br>
-                          <h1 class="section-heading">Treatment#1: Observation</h1>
-                    <!-- <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#3rdPage">Treatment</a></li>
-                      <li class="breadcrumb-item active">Observation</li>
-                    </ol> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid">     
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
-                        <ul class="nav nav-tabs" data-tabs="tab">
-                        <li class="active"><a data-toggle="tab" href="#home">Introduction</a></li>
-                         <li><a data-toggle="tab" href="#menu1">Types of Observation</a></li>
-                         <li><a data-toggle="tab" href="#menu2">Advantages</a></li>
-                         <li><a data-toggle="tab" href="#menu3">Disadvantages</a></li>
-                        </ul>
-                        <div class="tab-content" style="max-height:30%">
-                          <div id="home" class="tab-pane fade in active" style="max-height:50%">
-                            <h3>What do I need to know about observation ?</h3>
-                            <dl>
-                              <dt><font>Suitable For</font></dt>
-                              <dd>Early-stage patient</dd>
-                              <dt>Cost</dt>
-                              <dd><ul><li>Depends on hospital.</li><li>Cost is mainly for consultation and testing.</li></ul></dd>
-                            </dl>             
-                          </div>
-                          <div id="menu1" class="tab-pane fade" style="max-height:30%">
-                            <h3>Active Surveillance</h3>
-                            <dl>
-                              <dt>Procedure</dt><ul>
-                                <li>Involves regular follow up with examinations and tests.</li>
-                                <li>PSA and prostate examination will be done every few months and prostate biopsy every 1 to 3 years.</li>
-                                <li>Active treatment such as surgery or radiotheraphy still remain as options in case of disease progression.</li>
-                              </ul>
-                              <dt>Suitable for</dt>
-                              <dd>Patient who have small cancer confined to the prostate gland and it doesnt grow fast.</dd>
-                            </dl>
-                            <h3>Watchful Waiting</h3>
-                            <dl>
-                              <dt>Procedure</dt>
-                              <dd><ul>
-                                <li>Involves less frequent follow up and examinations than active surveillance</li>
-                                <li>Only done if there is concern that the cancer is growing too fast or patient develop symptom.</li>
-                              </ul></dd>
-                              <dt>Suitable for</dt>
-                              <dd>Patient who is old and have a lot of serious health problem.</dd>
-                            </dl>
-                          </div>
-                          <div id="menu2" class="tab-pane fade" style="max-height:30%">
-                            <h3>Advantages</h3>
-                            <dl>
-                              <dt>Can avoid complications of active treatment such as : </dt>
-                              <dd><ul>
-                                <li>Trouble controlling bladder or bowels</li>
-                                <li>Trouble having an erection</li>
-                              </ul></dd>
-                              <dt>Can change your treatment option</dt>
-                              <ul><li><dd>You can always change your treatment option to either surgery or radiotheraphy.</dd></li></ul>
-                              <dt>Cheaper cost</dt>
-                              <ul><li><dd>Cost is cheaper compared to active treatment (surgery and radiotheraphy).But <b>active surveillance is more costly than watchful waiting</b> as it require more frequent testing and follow up.</dd></li></ul>
-                            </dl>
-                          </div>
-                          <div id="menu3" class="tab-pane fade" style="max-height: 30%">
-                            <h3>Disadvantages</h3>
-                            <dl>
-                              <dt>Feel worried or anxious</dt>
-                              <dd><ul><li>You may feel worried or anxious about living with cancer and putting off the treatment.</li></ul></dd>
-                              <dt>Follow up</dt>
-                              <dd><ul>
-                                <li>The cancer needs to be followed closely.</li>
-                              </ul></dd>
-                              <dt>Time consuming</dt>
-                              <dd><ul>
-                                <li>Patient need to go for blood tests and biopsies more frequently (in case of active surveillance)</li>
-                              </ul></dd>
-                              <dt>Cancer may spread</dt>
-                              <dd><ul>
-                                <li>The cancer may spread and become harder to treat. However, the chance is low if the prostate cancer risk of progression is low.</li>
-                              </ul></dd>
-                            </dl>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </header>
-            </div>
-            <div class="slide" id="slide23">
-              <header>
-                <div class="header-content">
-                  <div class="treatment-header">
-                    <div class="container-fluid ">
-                      <div class="row">
-                        <div class="col-lg-12 text-left">
-                          <br>
-                          <h1 class="section-heading">Treatment#2: Surgery</h1>
-                           <!--  <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="#3rdPage">Treatment</a></li>
-                              <li class="breadcrumb-item active">Surgery</li>
-                            </ol> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid">     
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
-                        <ul class="nav nav-tabs" data-tabs="tab">
-                         <li class="active"><a data-toggle="tab" href="#home2">Introduction</a></li>
-                         <li><a data-toggle="tab" href="#menu21">Types of Surgery</a></li>
-                         <li><a data-toggle="tab" href="#menu22">Additional Information</a></li>
-                         <li><a data-toggle="tab" href="#menu23">Advantages</a></li>
-                         <li><a data-toggle="tab" href="#menu24">Disadvantages#1</a></li>
-                         <li><a data-toggle="tab" href="#menu25">Disadvantages#2</a></li>
-                        </ul>
-                       <div class="tab-content" style="max-height:70%">
-                        <div id="home2" class="tab-pane fade in active" style="max-height:70%">
-                          <h3>What do I need to know about surgery ?</h3>
-                          <dl>
-                            <dt><font>Suitable For</font></dt>
-                            <dd>Early-stage patient in good health</dd>
-                            <dt>Admission Duration</dt>
-                            <dd>One or more days</dd>
-                            <dt>Outcome</dt>
-                            <dd>Entire prostate gland will be removed, sometimes lymph gland (nodes) will also be removed.</dd>
-                            <dt>Surgery Duration</dt>
-                            <dd>Usually takes about 2 to 4 hours</dd>
-                          </dl>             
-                        </div>
-                        <div id="menu21" class="tab-pane fade" style="max-height:70%">
-                          <h3>Open Prostatectomy</h3>
-                          <dl>
-                            <dt>Procedure</dt>
-                            <dd>Prostate is removed through a single long cut made in the abdomen from a point below the belly button to just above the pubic bone.</dd>
-                            <dt>Cost</dt>
-                            <dd><ul><li>Government Hospital: RM500 - 2,000</li><li>Private Hospital: RM20,000 - 25,000</li></ul></dd>
-                          </dl>
-                          <h3>Laparoscopic/ Robotic Surgery</h3>
-                          <dl>
-                            <dt>Procedure</dt>
-                            <dd>A laparoscope is used to remove the prostate. This surgery is done through 4 to 6 small cuts in the belly button and the abdomen.</dd>
-                            <dt>Cost</dt>
-                            <dd>Please refer to your doctor.</dd>
-                          </dl>
-                        </div>
-                        <div id="menu22" class="tab-pane fade" style="max-height:70%">
-                          <h3>Comparison between Open Prostatectomy and Laparoscopic</h3>
-                          <dl>
-                            <dt>Similarities</dt>
-                            <dd><ul><li>Result of surgery are the same</li><li>Type of surgery doesn't matter as long as the surgeon is experienced</li></ul></dd>
-                            <dt>Differences</dt>
-                            <dd><ul><li>Laparoscopic may cause less pain, bleeding and require shorter hospital stay</li></ul></dd>
-                          </dl>
-                          <h3>Post-surgery care</h3>
-                          <dl>
-                            <dt>Urination Aid</dt>
-                            <dd><ul><li>A tube(catheter) will be left in the bladder to drain the urine</li><li>It will be there for 1-2 weeks to help the wound heal</li></ul></dd>
-                            <dt>Rest</dt>
-                            <dd><ul><li>You are advised to rest and avoid strenuous activities for 4-6 weeks before resuming your routine activities</li></ul></dd>
-                            <dt>Diet</dt>
-                            <dd><ul><li>Advised to have a healthy diet</li><li>Advised to do appropriate physical activities</li><li>No special food restriction</li></ul></dd>
-                          </dl>
-                        </div>
-                        <div id="menu23" class="tab-pane fade" style="max-height:70%">
-                          <h3>Advantages</h3>
-                          <p>
-                            <ul>
-                              <li>Offers a cure if the cancer is removed completely.</li>
-                            </ul>
-                          </p>
-                        </div>
-                        <div id="menu24" class="tab-pane fade" style="max-height:70%">
-                          <h3>Disadvantages (1/2)</h3>
-                          <dl>
-                            <dt>Sometimes not all cancer cells are removed.</dt>
-                            <dd><ul><li>Need additional treatment such as radiation to remove remaining cancer cells.</li></ul></dd>
-                            <dt>Complications of the surgery : </dt>
-                            <dd>
-                              <ul>
-                                <li>Bleeding that require blood transfusion.</li>
-                                <li>Blood clots in legs or lungs</li>
-                                <li>Wound infection</li>
-                              </ul>
-                            </dd>
-                            <dt>Problems of controlling urine (Incontinence)</dt>
-                            <dd>
-                              <ul>
-                                <li>Urine may leak when cough, sneeze, strain or change positions suddenly</li>
-                                <li>May last up to several months</li>
-                                <li>Don't need special treatment</li>
-                                <li>92 of 100 men get better on their own if they had leaking of urine after surgery. The remaining does not get better</li>
-                                <li>Can use pad to protect clothes</li>
-                                <li>Or undergo special surgery to control leakage</li>
-                                <li>Younger men have fewer problem controlling their urine</li>
-                              </ul>
-                            </dd>
-                            <dt>Problem passing urine</dt>
-                            <dd>
-                              <ul>
-                                <li>Passage of urine improves after surgery for most men</li>
-                                <li>Sometimes, scars can be form inside urethra (known as urethral stricture)</li>
-                                <ul>
-                                  <li>Occurs in 2-9 men of 100</li>
-                                  <li>Find hard to pass urine</li>
-                                  <li>Need procedure to unblock narrowing of urethra</li>
-                                </ul>
-                              </ul>
-                            </dd>
-                          </dl>
-                        </div>
-                        <div id="menu25" class="tab-pane fade" style="max-height:70%">
-                          <h3>Disadvantages (2/2)</h3>
-                          <dl>
-                            <dt>Erection Problem Erectile Dysfunction,ED)</dt>
-                            <dd>
-                              <ul>
-                                <li>Problem having an erection</li>
-                                <li>Affect feeling about sex and yourself</li>
-                                <ul>
-                                  <li>80 of 100 have long term ED, it depends on extent of the surgery</li>
-                                </ul>
-                                <li>The risk will be lowered if you : </li>
-                                <ul>
-                                  <li>Have good erection before surgery</li>
-                                  <li>Have nerve-sparing surgery</li>
-                                  <li>Younger</li>
-                                </ul>
-                                <li>Can be treated with : </li>
-                                <ul>
-                                  <li>Oral tablets</li>
-                                  <li>Vacuum devices</li>
-                                  <li>Injections</li>
-                                  <li>Penile implant</li>
-                                </ul>
-                              </ul>
-                            </dd>
-                            <dt>Risk of Death</dt>
-                            <dd>
-                              <ul>
-                                <li>Very rare (may happen in 1-2 men of 1000!)</li>
-                              </ul>
-                            </dd>
-                          </dl>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container nav-btn">
-                    <div class="row">
-                      <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide </button>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                      </div>
-                      <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                        <button class="btn btn-default">Next Slide >></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>
-            </div>
-            <div class="slide" id="slide24">
-              <header>
-                <div class="header-content">
-                  <div class="treatment-header">
-                    <div class="container-fluid ">
-                      <div class="row">
-                        <div class="col-lg-12 text-left">
-                          <br>
-                          <h1 class="section-heading">Treatment#3: Radiotherapy</h1>
-                      <!-- <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#3rdPage">Treatment</a></li>
-                        <li class="breadcrumb-item active">Radiotherapy</li>
-                      </ol>
-                    -->                
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                    <div class="container-fluid">     
-                      <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
-                          <ul class="nav nav-tabs" data-tabs="tab">
-                           <li class="active"><a data-toggle="tab" href="#home3">Introduction</a></li>
-                           <li><a data-toggle="tab" href="#menu31">EBRT</a></li>
-                           <li><a data-toggle="tab" href="#menu32">Brachytherapy</a></li>
-                           <li><a data-toggle="tab" href="#menu33">Advantages</a></li>
-                           <li><a data-toggle="tab" href="#menu34">Disadvantages</a></li>
-                         </ul>
-                         <!-- TAB DETAILS-->
-                         <div class="tab-content">
-                          <div id="home3" class="tab-pane fade in active" style="max-height:70%">
-                            <h3>What do I need to know about radiotherapy ?</h3>
-                            <dl>
-                              <dt><font>How it works</font></dt>
-                              <dd><ul>
-                                <li>High-energy x-rays are used to destroy cancer cells in the prostate glands.</li>
-                                <li>It can be given from either: 
-                                  <ul>
-                                    <li>outside: External beam radiotherapy (EBRT)</li>
-                                    <li>inside: Brachytherapy</li>
-                                  </ul>
-                                </li>
-                              </ul></dd>
-                              <dt>Complementary Hormone Therapy</dt>
-                              <dd>If you choose to have radiotherapy treatment, hormone therapy might be suggested to achieve better long term outcome or to reduce the prostate size before radiotherapy</dd>
-                              <dt>Cost</dt>
-                              <dd><ul>
-                                <li>Government Hospital: RM500 - 5,000</li>
-                                <li>Private Hospital: Up to RM15,000</li>
-                              </ul></dd>
-                            </dl>             
-                          </div>
-                          <div id="menu31" class="tab-pane fade" style="max-height:70%">
-                            <h3>External Beam Radiotherapy (EBRT)</h3>
-                            <dl>
-
-                              <dt>Aim</dt>
-                              <ul><dd><li>To improve the control of cancer and lower the chance of long term side effects</li></dd></ul>
-
-                              <dt>Procedure</dt><ul>
-                              <dd><li>Given from outside the body and is directed specifically at the prostate gland.</li>
-                                <li>Daily session from Monday to Friday and will take about 10-20 minutes for each sessions.</li></dd>
-                              </ul>
-
-                              <dt>Pre-treatment</dt>
-                              <ul>
-                                <dd><li>Patient has to undergo a planning session called simulation</li><ul>
-                                  <li>To ensure the radiation is targeted at the area to be treated.</li>
-                                  <li>To increase the chance of cure.</li>
-                                  <li>Spare normal tissues as much as possible to reduce side effects.</li>
-                                  <li>Simulation my involve one or two visits to the hospital</li>
-                                  <li>Each session will last about 20-30 minutes</li>
-                                </ul></dd>
-                              </ul>
-
-                              <dt>Techniques of EBRT</dt>
-                              <ul><dd>
-                                <li>Conformal Radiotherapy (CRT)</li>
-                                <li>Intensity Modulated Radiation Treatment (IMRT)</li>
-                                <li>Image Guided Radiation Treatment (IGRT)</li>
-                                <li>Stereotactic Radiotherapy (SRT)</li>
-                              </dd></ul>
-                            </dl>
-                          </div>
-                        <div id="menu32" class="tab-pane fade" style="max-height:70%">
-                          <h3>Brachytherapy</h3>
-                          <dl>
-                            <dt>Procedure</dt>
-                            <dd><ul>
-                              <li>Brachytherapy is directed specifically at the prostate gland but is given from inside the gland itself.</li>
-                              <li>It will destroy cancer cells from within the tumour without causing too much damage to the normal tissues around the prostate.</li>
-                            </ul></dd>
-                            <dt>Not suitable for</dt>
-                            <ul><dd><li>Patient who have undergo surgery to the prostate gland,urinary symptoms or large prostate size.</li></dd></ul>
-                            <dt>Pre-treatment</dt>
-                            <ul>
-                              <dd>
-                                <li>Patient has to undergo an ultrasound to guide the insertion of the radioactive seeds or applicator needles.</li>
-                                <ul>
-                                  <li>Done in operting room under general anesthesia.</li>
-                                  <li>Might be able to go home on the same day.</li>
-                                </ul>
-                              </dd>
-                            </ul>
-                          </dl>
-                        </div>
-                        <div id="menu33" class="tab-pane fade" style="max-height:70%">
-                          <h3>Advantages</h3>
-                          <dl>
-                            <dt>Disease is cured</dt>
-                            <dd><ul>
-                              <li>If the radiotherapy killed all cancer cells,patient can be free from the disease for the rest of his life.</li>
-                            </ul></dd>
-
-                            <dt>Lower probability of Erectile Dysfunction</dt>
-                            <ul><li><dd>Erectile dysfunction is less likely to happen with radiotherapy compared to surgery,but more likely than with observation.</dd></li></ul>
-
-                            <dt>Fewer urine leaking problems</dt>
-                            <ul><li><dd>Radiotherapy has fewer problems with urine leaking compared to surgery.</dd></li></ul>
-
-                            <dt>Not admitted in hospital</dt>
-                            <ul><li><dd>Patient do not need to be admitted to the hospital unlike surgery.</dd></li></ul>
-                          </dl>
-                        </div>
-                        <div id="menu34" class="tab-pane fade" style="max-height:70%">
-                          <h3>Disadvantages</h3>
-                          <dl>
-                            <dt>Radiation may not kill all cancer cells.</dt>
-                            <dd><ul><li>If radiotherapy does not cure your cancer, surgery may be necessary. However surgery may be more difficult because of scarring around the prostate after radiotherapy.</li></ul></dd>
-                            <dt>Regular follow up</dt>
-                            <dd><ul>
-                              <li>You will be seen regularly by your oncologists during radiotherapy to monitor for and treat side effects that usually will occur two weeks after starting EBRT.</li>
-                            </ul></dd>
-                            <dt>Temporary Side effects</dt>
-                            <dd><ul>
-                              <li>Tiredness</li>
-                              <li>Mild skin redness and dryness</li>
-                              <li>Urinary symptoms
-                                <!-- <ul>
-                                  <li>Passing urine frequently</li>
-                                  <li>Urine leakage when feeling of urinate</li>
-                                  <li>Weak stream</li>
-                                  <li>Painful urination</li>
-                                  <li>Blood in the urine</li>
-                                  <li>Leaking of urine</li>
-                                </ul> -->
-                              </li>
-                              <li>Bowel symptoms
-                                <!-- <ul>
-                                  <li>Diarrhoea</li>
-                                  <li>Urgency</li>
-                                  <li>Painful passing motion</li>
-                                  <li>Blood in stool</li>
-                                </ul> -->
-                              </li>
-                              <li>Discomfort in abdomen</li>
-                            </ul></dd>
-                            <dt>Permanent Side Effects</dt>
-                            <dd>
-                              <div class="table-hover table-responsive table-striped">
-                                <table class="table">
-                                  <thead>
-                                    <th>Radiotherapy Type</th>
-                                    <th>Problems passing urine</th>
-                                    <th>Change in bowel habit</th>
-                                    <th>Erection problem</th>
-                                    <th>Risk of bladder and rectal cancer</th>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>EBRT</td>
-                                      <td>11 out of 100 men</td>
-                                      <td>11 out of 100 men</td>
-                                      <td>35 to 45 out of 100 men</td>
-                                      <td>160 out of 100,000 men</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Brachytherapy</td>
-                                      <td>16 out of 100 men</td>
-                                      <td>8 out of 100 men</td>
-                                      <td>35 to 45 out of 100 men</td>
-                                      <td>160 out of 100,000 men</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container nav-btn">
-                  <div class="row">
-                    <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide</button>
-                    </div>                        
-                    <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                    </div>
-                    <div class="scroll-down-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                      <button class="btn btn-default">Next Section >></button>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-            </header>
-          </div>
-          </div>
-          <div class="section" id="section3">
-            <div class="slide active" id="slide31">
-              <header>
-                <div class="header-content">
-                  <div class="header-content-inner">
-                    <h1>PART 4: <br>
-                    Long Term Side Effects Of Treatment Choices</h1>
-                    <div class="container nav-btn">
-                      <div class="row">
-                        <div class="scroll-up-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                          <button class="btn btn-default"><< Previous Section</button>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        </div>
-                        <div class="fp-controlArrow fp-next col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                          <button class="btn btn-default">Next Slide >></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </header>
-            </div>
-            <div class="slide" id="slide32">
-              <header>
-                <div class="header-content">
-                  <div class="treatment-header">
-                    <div class="container-fluid ">
-                      <div class="row">
-                        <div class="col-lg-12 text-left">
-                          <br>
-                          <h1 class="section-heading">Long Term Side Effects</h1>
-                      <!-- <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#3rdPage">Treatment</a></li>
-                        <li class="breadcrumb-item active">Radiotherapy</li>
-                      </ol>
-                    -->                
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid">     
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
-                        <ul class="nav nav-tabs" data-tabs="tab">
-                         <li class="active"><a data-toggle="tab" href="#home4">Statistics#1</a></li>
-                         <li><a data-toggle="tab" href="#menu41">Statistic#2</a></li>
-                         <li><a data-toggle="tab" href="#menu42">Statistics#3</a></li>
-                       </ul>
-                       <!-- TAB DETAILS-->
-                       <div class="tab-content">
-                        <div id="home4" class="tab-pane fade in active" style="max-height:70%">
-                          <div class="table-hover table-responsive table-striped">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th rowspan="2">Problems</th>
-                                  <th colspan="2">Observation</th>
-                                  <th colspan="3">Active Treatment</th>
-                                </tr>
-                                <tr>
-                                  <th>Watchful Waiting</th>
-                                  <th>Active Surveillance</th>
-                                  <th>Surgery</th>
-                                  <th>External Radiotherapy</th>
-                                  <th>Internal Radiotherapy</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th>Problem with erection</th>
-                                  <th colspan="5"></th>
-                                </tr>
-                                <tr>
-                                  <td>-At 2 years</td>
-                                  <td>45 in 100 may have, 55 may not</td>
-                                  <td>45 in 100 may have, 55 may not</td>
-                                  <td>58 in 100 may have, 42 may not</td>
-                                  <td>60 in 100 may have, 40 may not</td>
-                                  <td>51 in 100 may have, 49 may not</td>
-                                </tr>
-                                <tr>
-                                  <td>-At 15 years</td>
-                                  <td>-</td>
-                                  <td>-</td>
-                                  <td>87 in 100 may have, 13 may not</td>
-                                  <td>93 in 100 may have, 7 may not</td>
-                                  <td>-</td>
-                                </tr>  
-                                <tr>
-                                  <th>Problem holding urine</th>
-                                  <th colspan="5"></th>
-                                </tr>
-                                <tr>
-                                  <td>-At 2 year</td>
-                                  <td>6 in 100 may have, 94 may not</td>
-                                  <td>6 in 100 may have, 94 may not</td>
-                                  <td>14 in 100 may have, 86 may not</td>
-                                  <td>7 in 100 may have, 93 may not</td>
-                                  <td>10 in 100 may have, 90 may not</td>
-                                </tr>                              
-                                <tr>
-                                  <td>-At 15 year</td>
-                                  <td>-</td>
-                                  <td>-</td>
-                                  <td>18 in 100 may have, 82 may not</td>
-                                  <td>9 in 100 may have, 91 may not</td>
-                                  <td>-</td>
-                                </tr>  
-                              </tbody>
-                            </table>
-                          </div>           
-                        </div>
-                        <div id="menu41" class="tab-pane fade" style="max-height:70%">
-                          <div class="table-hover table-responsive table-striped">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th rowspan="2">Problems</th>
-                                <th colspan="2">Observation</th>
-                                <th colspan="3">Active Treatment</th>
-                              </tr>
-                              <tr>
-                                <th>Watchful Waiting</th>
-                                <th>Active Surveillance</th>
-                                <th>Surgery</th>
-                                <th>External Radiotherapy</th>
-                                <th>Internal Radiotherapy</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>    
-                                <th>Passing urine(2 year)</th>
-                                <th colspan="5"></th>
-                              </tr>
-                              <tr>
-                                 <td>-Painful</td>
-                                 <td>-</td>
-                                 <td>-</td>
-                                 <td>&#60 1 in 100 may have, 99 may not</td>
-                                 <td>1 in 100 may have, 99 may not</td>
-                                 <td>5 in 100 may have, 95 may not</td>
-                              </tr>
-                              <tr>
-                                <td>-Frequency</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>10 in 100 may have, 90 may not</td>
-                                <td>14 in 100 may have, 86 may not</td>
-                                <td>20 in 100 may have, 80 may not</td>
-                              </tr>                              
-                              <tr>
-                                <th>Loose bowels (Diarrhoea)</th>
-                                <th colspan="5"></th>
-                              </tr>
-                              <tr>
-                                 <td>-At 2 year</td>
-                                 <td>-</td>
-                                 <td>-</td>
-                                 <td>&#60 1 in 100 may have, 99 may not</td>
-                                 <td>10 in 100 may have, 90 may not</td>
-                                 <td>7 in 100 may have, 93 may not</td>
-                               </tr>
-                                <tr>
-                                  <td>-At 15 year</td>
-                                  <td>-</td>
-                                  <td>-</td>
-                                  <td>5 in 100 may have, 99 may not</td>
-                                  <td>16 in 100 may have, 84 may not</td>
-                                  <td>-</td>
-                                </tr>  
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div id="menu42" class="tab-pane fade" style="max-height:70%">
-                        <div class="table-hover table-responsive table-striped">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th rowspan="2">Problems</th>
-                                <th colspan="2">Observation</th>
-                                <th colspan="3">Active Treatment</th>
-                              </tr>
-                              <tr>
-                                <th>Watchful Waiting</th>
-                                <th>Active Surveillance</th>
-                                <th>Surgery</th>
-                                <th>External Radiotherapy</th>
-                                <th>Internal Radiotherapy</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th>Risk of dying (Death)</th>
-                                <td>Not applicable</td>
-                                <td>Not applicable</td>
-                                <td>Rare (0-2 in 100 may die, 98-100 may not)</td>
-                                <td>Rare (2 in 1000 may die, 998 may not)</td>
-                                <td>Rare* (no data)</td>
-                             </tr>
-                              <tr>
-                                <th>Risk of dying from prostate cancer in 10 years</th>
-                                <th colspan="5"></th>
-                              </tr>
-                              <tr>
-                                <td>-Low risk</td>
-                                <td>3-11 in 100 may die, 89-97 may not</td>
-                                <td>3 in 100 may die, 97 may not</td>
-                                <td>&#60 1-7 in 100 may die, 93-100 may not</td>
-                                <td>2 in 100 may have, 98 may not</td>
-                                <td>4 in 100 may have, 96 may not</td>
-                              </tr>
-                              <tr>
-                                <td>-Intermediate risk</td>
-                                <td>11 in 100 may die, 89 may not</td>
-                                <td>-</td>
-                                <td>3-5 in 100 may have, 95-97 may not</td>
-                                <td>4 in 100 may have, 96 may not</td>
-                                <td>13 in 100 may die, 87 may not</td>
-                              </tr>
-                              <tr>
-                                <td>-High risk</td>
-                                <td>18 in 100 may die, 82 may not</td>
-                                <td>-</td>
-                                <td>8-9 in 100 may have, 91-92 may not</td>
-                                <td>8 in 100 may have, 92 may not</td>
-                                <td>31 in 100 may die, 69 may not</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <div class="container nav-btn">
-                  <div class="row">
-                    <div class="fp-controlArrow fp-prev col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
-                        <button class="btn btn-default"><< Previous Slide</button>
-                    </div>                        
-                    <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-sm-4 text-right">
-                    </div>
-                    <div class="scroll-down-btn col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
-                      <button class="btn btn-default">Next Section >></button>
-                    </div>
-                  </div>
-              </div> 
-              </div>
-            </header>
-          </div>
         </div>
-  </body>
+	</section>
+	<aside class="bg-dark" id="download">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Download Early Prostate Cancer Decision Aid</h2>
+                <hr class="light">
+				<p class="text-faded">Wish to download a copy for offline reading? Please click the download button below. It's all for free!</p>
+                <form method="get" action="include/PDA.pdf"><button class="btn btn-default btn-xl sr-button">Download</button></form>
+            </div>
+        </div>
+    </aside>
+	<section class="bg-primary" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h2 class="section-heading">Have Inquiry?</h2>
+					<hr class="footer-hr">
+					<p class="text-faded-no-margin">Contact us at: </p>
+					<p><strong>03-89472538</strong></p>
+					<p><strong>pylee02@gmail.com</strong></p>
+				</div>
+				<div class="col-lg-6 text-center">
+					<h2 class="section-heading">Project Collaboration Between:</h2>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-xs-6 text-center" style="margin-top: 20px">
+							<img src="img/UM-logo.png" alt="UM" >					
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 text-center" style="margin-top: 20px">
+							<img src="img/UPM-logo.png" alt="UPM" >
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+
+	<!-- Own js -->
+	<script type="text/javascript" src="js/scrolling-nav.js"></script>
+
+	<!-- Scrolling Nav js -->
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+</body>
 </html>
