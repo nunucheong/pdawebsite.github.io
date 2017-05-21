@@ -34,7 +34,7 @@ function getCheckedBoxes(chkboxName) {	//function to collect all ticked checkbox
 	function retrieveGoals(patientTreatmentGoals){	//generate table based on user selection
 var tick = "&#9745";
 var untick = "&#9744";
-		var createTable = "<div id='goalsOutput'><br/><h1><b><center>Treatment Goals</center></b></h1><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
+		var createTable = "<div id='goalsOutput'><br/><h1><b>Knowing what is important to you</b></h1><h4>When discussing options with your doctor, it is important to think about what is personally important to you. One helpful way is to think about your decision in terms of:<ul><li>Your <b>treatment goals</b> (something you want to achieve through your choice of treatment)</li><li>Your <b>treatment concerns</b> (worries or questions you may have)</li></ul></h4><h1><b><center>Treatment Goals</center></b></h1><table id='tab_customers' class='table table-striped'><colgroup><col width='20%'><col width='20%'></colgroup><thead><tr class='warning'><th>Treatment Goals</th><th>Importance</th></tr></thead><tbody>";
 		for(i=0;i<6;i++){
 			var data = document.forms["patientTreatmentGoals"]["treatmentGoals["+i+"]"].value;
 			if(data == "1")
@@ -83,7 +83,7 @@ var untick = "&#9744";
         }
     };
     margins = {
-        top: 150,
+        top: 40,
         bottom: 60,
         left: 40,
         width: 522
@@ -116,7 +116,17 @@ var untick = "&#9744";
 
 </script>
 <div id="outputLocation">
+<div id="intro" class="alert alert-info">
+<h1><b>Knowing what is important to you</b></h1>
+<h4>When discussing options with your doctor, it is important to think about what is personally important to you. One helpful way is to think about your decision in terms of:
+<ul>
+<li>Your <b>treatment goals</b> (something you want to achieve through your choice of treatment)</li>
+<li>Your <b>treatment concerns</b> (worries or questions you may have)</li>
+</ul>
+</h4>
+</div>
 <h1><center><b>Treatment Goals</b></center></h1>
+<h4><b>How important are the following to you when making a decision about prostate cancer treatment? (Tick your priority level on each item on the scale below).</b></h4>
 <form id="patientTreatmentGoals" name ="patientTreatmentGoals">
 	<table class="table table-striped table-bordered custom-matrix">
 	<thead>
@@ -169,7 +179,8 @@ var untick = "&#9744";
 	
 </form>
 
-<h1><center><b>Patient's Concerns</b></center></h1>
+<h1><center><b>Treatment Concerns</b></center></h1>
+<h4><b>What are your concerns about prostate cancer treatment? (Tick your concerns) you can tick more than one box.</b></h4>
 <form id="patientConcerns" name="patientConcerns">
 
 <div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" onchange='addKnowledge(this);' value="I dont have enough information to make a choice.I want to know more about ... ">I dont have enough information to make a choice.I want to know more about ... </label></h4></div>
