@@ -50,7 +50,7 @@ h6 {
 }
 
 p {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.5;
 	margin-bottom: 20px;
 }
@@ -61,8 +61,8 @@ p {
 
 .text-faded{
 	font-weight: 300;
-	color: rgba(255, 255, 255, 0.7);
-	font-size: 16px;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 26px;
 }
 
 .text-faded-no-margin{
@@ -111,17 +111,18 @@ header .header-content .header-content-inner h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 30px;
-  text-shadow: 2px 2px #ff0000;
+  font-size: 40px;
+  text-shadow: 2px 2px #000000;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
 header .header-content .header-content-inner p {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  font-size: 26px;
   margin-bottom: 50px;
+  text-shadow: 2px 2px #000000;
 }
 @media (min-width: 768px) {
   header {
@@ -144,7 +145,7 @@ header .header-content .header-content-inner p {
     font-size: 50px;
   }
   header .header-content .header-content-inner p {
-    font-size: 18px;
+    font-size: 28px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
