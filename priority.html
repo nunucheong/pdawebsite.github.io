@@ -47,14 +47,14 @@ var untick = "&#9744";
 				data = "Unanswered";
 			createTable += "<tr><td>"+treatmentGoalsIssues[i]+"</td><td>"+data+"</td></tr>";
 		}
-		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button onclick='javascript:generatePDF();'>Create PDF</button>";
+		createTable += "</tbody></table>"+getCheckedBoxes("concerns[]")+"</div><button class='btn btn-success' onclick='javascript:generatePDF();'>Create PDF</button>";
 		// createTable += "<p>&#9744; huhuhuu</p><p>&#9745; testtttt</p>";
 		document.getElementById("outputLocation").innerHTML = createTable;
 		}
 
 		function addSupport(checkbox){	//function utk add checkbox
 
-		var expand = "<div class='checkbox'><label><input type='checkbox' name='concerns[]' value='->   Family support'>Family support</label></div><div class='checkbox'><label><input type='checkbox' name='concerns[]' value='->   Financial support'>Financial support</label></div><div class='checkbox'><label><input type='checkbox' name='concerns[]' value='->   Spiritual support'>Spiritual support</label></div><div class='checkbox'><label><input type='checkbox' name='concerns[]' value='->   Support from doctors'>Support from doctors</label></div><div class='checkbox'><label><input type='checkbox' name='concerns[]' value='->   Peers/ support group'>Peers/ support group</label></div>";
+		var expand = "<div class='checkbox'><h4><label><input type='checkbox' name='concerns[]' value='->   Family support'>Family support</label></h4></div><div class='checkbox'><h4><label><input type='checkbox' name='concerns[]' value='->   Financial support'>Financial support</label></h4></div><div class='checkbox'><h4><label><input type='checkbox' name='concerns[]' value='->   Spiritual support'>Spiritual support</label></h4></div><div class='checkbox'><h4><label><input type='checkbox' name='concerns[]' value='->   Support from doctors'>Support from doctors</label></h4></div><div class='checkbox'><h4><label><input type='checkbox' name='concerns[]' value='->   Peers/ support group'>Peers/ support group</label></h4></div>";
 
 		if(checkbox.checked){
 			document.getElementById("expandSupport").innerHTML = expand;
@@ -172,31 +172,29 @@ var untick = "&#9744";
 <h1><center><b>Patient's Concerns</b></center></h1>
 <form id="patientConcerns" name="patientConcerns">
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" onchange='addKnowledge(this);' value="I dont have enough information to make a choice.I want to know more about ... ">I dont have enough information to make a choice.I want to know more about ... </label></div>
-
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" onchange='addKnowledge(this);' value="I dont have enough information to make a choice.I want to know more about ... ">I dont have enough information to make a choice.I want to know more about ... </label></h4></div>
 <div id="expandKnowledge"></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I am concerned about the treatment cost.">I am concerned about the treatment cost.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I am concerned about the treatment cost.">I am concerned about the treatment cost.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I want to know about how treatment will affect my lifestyle.">I want to know about how treatment will affect my lifestyle.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I want to know about how treatment will affect my lifestyle.">I want to know about how treatment will affect my lifestyle.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I want to know about how treatment will affect my work.">I want to know about how treatment will affect my work.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I want to know about how treatment will affect my work.">I want to know about how treatment will affect my work.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I have religious concerns about the treatment.">I have religious concerns about the treatment.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I have religious concerns about the treatment.">I have religious concerns about the treatment.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I want to know more about survival.">I want to know more about survival.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I want to know more about survival.">I want to know more about survival.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I want to know more about the experiences of other people with prostate cancer.">I want to know more about the experiences of other people with prostate cancer.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I want to know more about the experiences of other people with prostate cancer.">I want to know more about the experiences of other people with prostate cancer.</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I want to know more about diet during treatment.">I want to know more about diet during treatment.</label></h4></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I want to know more about diet during treatment.">I want to know more about diet during treatment.</label></div>
-
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" onchange='addSupport(this);' value="I need more support in making a decision. I want more:">I need more support in making a decision. I want more :</label></div>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" onchange='addSupport(this);' value="I need more support in making a decision. I want more:">I need more support in making a decision. I want more :</label></h4></div>
 
 <div id="expandSupport"></div>
 
-<div class="checkbox"><label><input type="checkbox" name="concerns[]" value="I am distressed (e.g. shocked, confused, angry, panicked)">I am distressed (e.g. shocked, confused, angry, panicked)</label><br/>
+<div class="checkbox"><h4><label><input type="checkbox" name="concerns[]" value="I am distressed (e.g. shocked, confused, angry, panicked)">I am distressed (e.g. shocked, confused, angry, panicked)</label></h4><br/>
 </form>
-<button type="button" class="btn btn-success" onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</button>
+<button type="button" class="btn btn-success btn-lg" onclick="javascript:retrieveGoals(patientTreatmentGoals);">Submit</button>
 </div>
 </body>
 </div>
