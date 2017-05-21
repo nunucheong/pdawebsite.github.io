@@ -100,10 +100,20 @@ var untick = "&#9744";
         }, margins);
     }
 
+    $(document).ready(function () {
+    $('.custom-matrix tr').click(function (e) {
+        var cell = $(e.target).get(0); // This is the TD you clicked
+        $(cell).find("input" ).attr('checked', true);
+        //mark true
+        var rad = $(cell).children('input');
+        $(rad).prop("checked", true)
+    });
+});
+
 </script>
 <div id="outputLocation">
 <form id="patientTreatmentGoals" name ="patientTreatmentGoals">
-	<table>
+	<table class="custom-matrix">
 	<thead>
 		<tr>
 			<th>Goals</th>
@@ -139,9 +149,9 @@ var untick = "&#9744";
 		</tr>
 		<tr>
 			<td>Having a good bowel and bladder control</td>
-			<td><input type="radio" name="treatmentGoals[4]" value="1" required/></td>
-			<td><input type="radio" name="treatmentGoals[4]" value="2" checked/></td>
-			<td><input type="radio" name="treatmentGoals[4]" value="3"/></td>
+			<td><label><input type="radio" name="treatmentGoals[4]" value="1" required/></label></td>
+			<td><label><input type="radio" name="treatmentGoals[4]" value="2" checked/></label></td>
+			<td><label><input type="radio" name="treatmentGoals[4]" value="3"/></label></td>
 		</tr>
 		<tr>
 			<td>Cost of treatment</td>
